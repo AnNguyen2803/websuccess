@@ -1,0 +1,816 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes contenFadeIn{
+    from{
+        transform: translateY(100px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+
+.header-top{
+    width: 100%;
+    height: 30px;
+    background-color: #214671;
+}
+.header-container{
+    width: 1170px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-container--left{
+    position: relative;
+    width: 100%;
+}
+.header-container--left  a{
+    position: absolute;
+    color: #a3adb9;
+    text-decoration: none;
+    float: left;
+    margin-top: 7px;
+    left: 0;
+    font-size: 14px;
+}
+.header-container--left li{
+    list-style: none;
+}
+
+.header-container--contact{
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    width: 41%;
+    height: 30px;
+}
+.header-container--contact a{
+    color: #002147;
+}
+.header-container--contact img{
+    width: 22px;
+    margin: 5px 4px;
+}
+.header-container--contact h3{
+    display: inline-block;
+    color: #a3adb9;
+    font-size: 14px;
+    margin: 7px;
+}
+.phone{
+    position: relative;
+}
+.phone::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    border-left: 0.8px solid #fff;
+    top: 7px;
+}
+.phone .phone-icon{
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    top: 9px;
+    left: -10px;
+}
+.mail{
+    position: relative;
+    margin: 0 0 0 15px;
+}
+.mail .mail-icon{
+    position: absolute;
+    color: #fff;
+    font-size: 12px;
+    top: 9px;
+    left: -8px;
+}
+/* Header mid */
+.header-mid{
+    position: relative;
+    width: 100%;
+    height: 88px;
+    background: linear-gradient(to top, #f5ecec, rgba(66, 189, 230, 0.68));
+
+}
+.header-mid--container{
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-mid--logo{
+    width: 300px;
+    padding: 0;
+}
+.header-mid--logo img{
+    width: 70px;
+    height: 70px;
+}
+.header-mid--logo-title{
+    font-size: 18px;
+    color: #007398;
+    position: absolute;
+    display: inline;
+    top:20px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.header-mid--left{
+    float: left;
+    position: relative;
+}
+.header-mid--right{
+    float:right;
+    position: relative;
+    width: 834px;
+}
+
+.header-mid--right li{
+    list-style: none;
+    display: flex;
+    float: left;
+    color: #000;
+
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    margin: 20px 5px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #3b8d99, tranferient);
+    cursor: pointer;
+}
+.caret{
+    width: 0px;
+    height: 0px;
+    vertical-align: middle;
+    margin-left: 4px;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.header-mid--right li:hover{
+    background-color: rgba(66, 189, 230, 0.68);
+}
+.header-menu{
+    position: absolute;
+    top:20px;
+    font-size: 17px;
+}
+.gioithieu:hover .container__drop{
+    display: block;
+}
+.gioithieu::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 120px;
+    bottom: 0;
+    left: 0px;
+}
+li:nth-child(3){
+    width: 160px;
+}
+.container__drop, .container__drop1, .container__drop2, .container__drop3, .container__drop4{
+    background-color: #007398;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    max-width: 230px;
+    padding: 0;
+    display: none;
+    border-radius: 2px;
+    animation: fadeIn ease-in-out .3s;
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.60);
+    z-index: 1;
+}
+.container__drop li{
+    max-width: 230px;
+    width: 100%;
+    margin: 0;
+}
+.container__drop a,
+.container__drop1 a,
+.container__drop2 a,
+.container__drop3 a,
+.container__drop4 a{
+    text-decoration: none;
+    font-size: 14px;
+    width: 190px;
+    color: #fff;
+}
+.hoptac{
+    position: relative;
+}
+.hoptac:hover .container__drop1{
+    display: block;
+}
+.hoptac::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 120px;
+    bottom: -20px;
+    left: 0px;
+}
+.container__drop1 {
+    width: 160px;
+    top: 48px;
+}
+.container__drop1 li,
+.container__drop2 li,
+.container__drop3 li,
+.container__drop4 li{
+    margin: 0;
+    width: 100%;
+}
+.container__drop1 a,
+.container__drop2 a,
+.container__drop3 a,
+.container__drop4 a{
+    width: 100%;
+    padding-left: 4px;
+}
+.khcn{
+    position: relative;
+}
+.khcn::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 130%;
+    bottom: -20px;
+    left: 0px;
+}
+.khcn:hover .container__drop2{
+    display: block;
+}
+.container__drop2{
+    width: 220px;
+    top: 48px;
+}
+.sinhvien{
+    position: relative;
+}
+.sinhvien::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 200px;
+    bottom: -20px;
+    left: 0px;
+}
+.sinhvien:hover .container__drop3{
+    display: block;
+}
+.container__drop3{
+    top: 48px;
+    width: 210px;
+}
+.tracuu{
+    position: relative;
+}
+.tracuu::after{
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 150px;
+    bottom: -20px;
+    left: 0px;
+}
+.tracuu:hover .container__drop4{
+    display: block;
+}
+.container__drop4{
+    top: 48px;
+    width: 160px;
+}
+/* Header search */
+.header-search{
+    width: 100%;
+    height: 50px;
+    background-color: #17467b;
+}
+.header-search--container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    position: relative;
+}
+.search-form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#sf-box{
+    width: 70%;
+    height: 50px;
+    padding-left: 40px;
+}
+
+input[type = submit]{
+    width: 30%;
+    position: absolute;
+    height: 50px;
+    top:0;
+    right: 0;
+    color: #fff;
+    background-color: #e25f30;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.input > i {
+    position: absolute;
+    top: 15px;
+    font-size: 20px;
+    color: #ccc;
+    left: 12px;
+}
+/*Slide Show */
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1900px;
+  position: relative;
+  margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot-container{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+}
+.dot {
+  cursor: pointer;
+  height: 8px;
+  width: 32px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 4px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+  width: 50px;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* Body News */
+
+.home-nd1--container{
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+}
+.row h2{
+    margin: 32px 0;
+}
+.row h2 a{
+    text-decoration: none;
+    color: #337ab7;
+    padding: 15px;
+}
+.col-12{
+    width: 25%;
+    float: left;
+    padding: 0px 15px;
+    max-height: 450px;    
+}
+.news-1 a{
+    text-decoration: none;
+    color:#3d4548;
+}
+.news-1 a:hover{
+    text-decoration: underline;
+}
+.news-1 a h3{
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 18px;
+    text-align: justify;
+}
+.box-view i{
+    padding: 0px 5px 0 0;
+    font-size: 10pt;
+    font-style: inherit;
+}
+.col-12 h5{
+    font-size: 10pt;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 18px;
+    margin: 2.5% 0 0 0;
+}
+.tinkhac h2{
+    display: flex;
+    justify-content: center;
+    background-color: #337ab7;
+    color: #fff;
+    margin: 0;
+}
+.news-different{
+    height: 450px;
+}
+.news-different a{
+    color: #3d4548;
+    text-decoration: none;
+    font-size: 13px;
+    text-align: justify;
+}
+.news-different a:hover{
+    text-decoration: underline;
+    color: #3d4244;
+}
+.news-different a h3{
+    padding: 4px 0px;
+    border-bottom: 1px solid #717171;
+    font-weight: 500;
+}
+
+/* Home ND 2 */
+
+.home-nd2{
+    background: url('https://www.hvnh.edu.vn/themes/main/images/banner-nen.png');
+    background-position: bottom;
+    width: 100%;
+    padding: 4.4% 0 2.6% 0 ;
+}
+.home-nd2--container{
+    width: 1170px;
+    margin: auto;
+}
+.row2{
+    display: flex;
+    flex-wrap: wrap;
+}
+.block1{
+    width: 50%;
+    padding: 0px 15px;
+}
+.home-nd2 .box-nd2{
+    background: white;
+    padding-bottom: 23px;
+    margin-bottom: 25px;
+}
+.home-nd2 .box-nd2 a{
+    text-decoration: none;
+    color:#337ab7;
+}
+.home-nd2 .box-nd2 h2{
+    margin: 15px 12px 0 12px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+.home-nd2 .box-nd2 h2:hover{
+    text-decoration: underline;
+}
+.home-nd2 .box-nd2 h5{
+    margin: 7px 12px 0 12px;
+    font-size: 10pt;
+    text-align: justify;
+    line-height: 18px;
+    overflow: hidden;
+}
+.block2{
+    width: 50%;
+}
+.box-element{
+    width: 50%;
+    padding: 0 17px;
+}
+/* ND 3 */
+.home-nd3{
+    background: #f5f5f5;
+}
+.home-nd3 .box-element h2{
+    color: #337ab7;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 20px 0;
+    margin: 0;
+}
+.home-nd3--container{
+    width: 1170px;
+    display: flex;
+}
+.home-nd3 .thong-tin-tuyen-sinh{
+    background: rgba(255, 255, 255, 3);
+    margin: 0;
+}
+.box-tuyen-sinh{
+    width: 50%;
+    padding: 0px 15px;
+}
+.box-tuyen-sinh .box-nd3a a{
+    text-decoration: none;
+    color: #3d4548;
+}
+.box-tuyen-sinh .box-nd3a a:hover{
+    text-decoration: underline;
+}
+.box-tuyen-sinh .box-nd3a h5{
+    font-size: 11pt;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: justify;
+}
+.box-nd3a{
+    padding: 20px 0 0 5px;
+}
+.box-nd3b{
+    padding: 20px 0px;  
+}
+.box-nd3b a{
+    text-decoration: none;
+    color:#3d4548;
+}
+.box-nd3b a h3{
+    padding-left: 20px;
+    font-size: 15px;
+    text-align: justify;
+}
+.box-nd3b a h3:hover{
+    text-decoration: underline;
+}
+.btn-primary{
+    color: #fff;
+    border-color:#2e6da4 ;
+}
+.home-nd3 .btn-primary {
+    display: block;
+    margin: auto;
+    margin-top: 5.4%;
+    margin-bottom: 9%;
+    padding: 1.4% 5.4%;
+    background: #007398;
+    font-size: 12pt;
+    font-weight: 600;
+    border: 0px;
+    cursor: pointer;
+}
+.box-nd3c{
+    background-color: white;
+    height: 549.09px;
+}
+.home-nd3 .btn-primary:hover{
+    color: #007398;
+    background: #ffed00;
+}
+.box-nd3c a:not(:first-child){
+    text-decoration: none;
+    color: #3d4548;
+    text-align: justify;
+    font-size: 10pt;
+}
+.box-nd3c a h3{
+    margin-left: 20px;
+    padding-right: 10px;
+}
+/* Banner */
+.home-banner-phan-cach{
+    background: url('https://www.hvnh.edu.vn/themes/main/images/banner-ngan-cach.png');
+    background-position: bottom;
+    padding: 4.5% 0 5.4% 0;
+}
+.home-banner--container{
+    width: 1170px;
+    margin: auto;
+}
+.banner-row{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+.banner-element{
+    display: flex;
+    align-items: center;
+
+}
+.banner-element h3{
+    font-size: 45pt;
+}
+.banner-element h3::after{
+    content: "";
+    width: 100%;
+    background-color: #FAC900;
+    display: block;
+    height: 2px;
+    margin-top: 20px;
+}
+.banner-element h5{
+    font-size: 13pt;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 24px;
+    width: 100px;
+    font-weight: 500;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+/* Home nd 4 */
+.home-nd4{
+    padding: 3.8% 0;
+}
+.home-nd4--container{
+    width: 1170px;
+    margin: auto;
+}
+.nd4-row{
+    
+}
+.nd4-element{
+    display: flex;
+    justify-content: space-around;
+
+}
+.box-nd4{
+    width: 33.33333%;
+}
+.box-nd4 a{
+    color: #337ab7;
+    text-decoration: none;
+}
+.box-nd4 h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+
+} 
+.box-nd4 h5{
+    text-align: center;
+    font-size: 11pt;
+    line-height: 20px;
+    color: #3d4548;
+    margin: 0;
+    font-weight: 600;
+    padding: 0 20px;
+}
+.home-nd4 .box-nd4 img{
+    display: block;
+    margin: auto;
+}
+/* Footer */
+
+footer{
+    background: url('https://www.hvnh.edu.vn/themes/main/images/banner-khoa.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 3.7% 0 3.9% 0;
+}
+.home-khoa{
+    width: 1170px;
+    margin: auto;
+}
+.footer-row{
+    display: flex;
+}
+.footer-row a{
+    text-decoration: none;
+}
+.footer-row h4{
+    color: #fecb02;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 10px 0px;
+}
+.footer-row h5{
+    color: white;
+    font-size: 10pt;
+    margin: 0 0 3px 0;
+}
+.footer-container{
+    margin-bottom: 20px;
+    padding: 0;
+    background: none;
+}
+
+.row-element{
+    padding: 0px 15px;
+    width: 16.66666667%;
+}
+.row-element:nth-child(2){
+    width: 58.33333333%;
+}
+.row-element:nth-child(3){
+    width: 25%;
+}
+.row-element a:hover{
+    color: #23527c;
+    text-decoration: underline;
+}
+.grid-template{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.grip2{
+    display: grid;
+    grid-template-columns: auto 252px;
+}
+input[type=email]{
+    width: 85%;
+    height: 30px;
+    border-radius: 2px;
+    border-color: none;
+}
+.row-element i:hover{
+    color: #17467b;
+}
+/* support */
+.support{
+
+    width: 220px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    height: auto;
+    box-shadow: 6px 6px 6px 10px rgba(0,0,0,0.2);
+}
+.support-title{
+    background-color: #3a5795;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: center;
+}
+.support-content{
+    background-color: #fff;
+    height: 200px;
+    width: 100%;
+    display: none;
+}
+#text-support{
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    bottom: 0;
+}
